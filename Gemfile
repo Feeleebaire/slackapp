@@ -8,6 +8,8 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.1'
 gem 'redis'
+gem 'slack-ruby-client'
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
