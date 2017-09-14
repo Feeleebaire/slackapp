@@ -29,7 +29,11 @@ module Slackapp
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    Slack.configure do |config|
+      config.token = ENV['SLACK_API_TOKEN']
+      fail 'Missing ENV[SLACK_API_TOKEN]!' unless config.token
 
+    end
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
